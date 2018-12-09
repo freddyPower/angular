@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html ng-app>
+    <head>
+        <title>Uso de ng-model</title>
+    </head>
+    
+    <body>
+        
+        <h3>IMAGENES</h3>
+        <h4>Imagen extraida 1: </h4> <input type="text" ng-model="fbId1" />
+        <br>
+        <h4>Imagen extraida 2: </h4> <input type="text" ng-model="fbId2"/>
+        
+        
+        <h4>Imagenes</h4>
+        <br>
+        
+        <h4>Imagen 1: </h4> 
+            <p>
+                <img src="https://graph.facebook.com/{{fbId1}}/picture?type=normal"/>
+            </p>
+        <br>
+        <h4>Imagen 2: </h4> <p> <img src="https://graph.facebook.com/{{fbId2}}/picture?type=normal"/> </p>
+        
+        <p>
+            Recursos: https://findmyfbid.com/
+            <br>
+            https://developers.facebook.com/docs/graph-api/using-graph-api/
+        </p>
+        
+        <script src="angular.min.js"></script>
+    </body>
+</html>

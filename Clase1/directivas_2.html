@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html ng-app>
+    <head>
+        <title>Calculadora ng-model</title>
+    </head>
+    
+    <bod>
+        
+        <h3>CALCULADORA</h3>
+        <h4>Cantidad 1: </h4> <input type="number" ng-model="cantidad1" />
+        <br>
+        <h4>Cantidad 2: </h4> <input type="number" ng-model="cantidad2"/>
+        
+        
+        <h4>RESULTADOS</h4>
+        <br>
+        
+        <h4>Suma: </h4> {{cantidad1 + cantidad2}}
+        <br>
+        <h4>Resta: </h4> {{cantidad1 - cantidad2}}        
+        <br>
+        <h4>Multiplicación: </h4> {{cantidad1 * cantidad2}}
+        <br>
+        <h4>División: </h4> {{cantidad1 / cantidad2}}
+        
+        
+        
+        <script src="angular.min.js"></script>
+    </bod>
+</html>

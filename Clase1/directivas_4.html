@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+
+<html ng-app>
+    <head>
+        <title>Uso de ng-model</title>
+    </head>
+    
+    <body>
+        
+        <h3>NG-CLICK</h3>
+        <div>
+            <input type="text" ng-model="nombre">
+            <p ng-init="nombre='Freddy'">{{nombre}}</p>
+            <input type="button" value="Luis" ng-click="nombre='Luis'">
+        </div>
+        
+        <script src="angular.min.js"></script>
+    </body>
+</html>

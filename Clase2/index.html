@@ -1,0 +1,224 @@
+<html>
+	
+	<head>
+		<title>AngularJs Directivas comunes</title>
+        <meta charset="utf-8">
+        
+        <style>
+            .error{
+                color:red;
+                background-color: aqua;
+            }
+            .bold{
+                font-weight: bold;
+            }
+            .div{
+                padding: 20 0 20 0;
+            }
+        </style>
+        
+        
+        <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
+	</head>
+	
+	<body ng-app>
+			
+            <!-- Formas de incluir angular en el proyecto -->			
+			<!--<script src="angular.min.js"/>-->
+			<!--<script src="angular.js"/>-->
+
+        <div><h3>ng-init</h3></div>
+        <div>Declaración de variables
+        <br>
+            <span ng-init="x=5; y=100; z=1">
+            {{x + "," + y}}
+                
+            <span ng-init="personas=[
+                            {nombre:'Freddy' , pais:'Mexico'} ,
+                            {nombre: 'Arturo' , pais:'Salvador'},
+                            {nombre: 'Maria' , pais:'España'}                           
+                           ]"></span>
+        </span>
+        
+        </div>
+        
+        
+        <div>Objetos JSON
+            <br>
+             <span ng-init="persona={nombre:'Freddy' , apellido:'Sanchez'}">
+            {{persona.nombre}}
+            {{persona.apellido}}
+        </span>
+        </div>
+       
+        
+        <div>
+            <span>Ejercicio, realizar con html, css y angular una replica de su identificaciòn oficial utilizando declaraciòn de variables por medio de ng-init</span>
+        </div>
+        
+        <div>
+            <h4>IDENTIFICACIÒN</h4>
+            <table>
+                <form>
+                    <tr>
+                        <td rowspan="3"> <center>Foto</center> </td>
+                        
+                        <td>
+                            <label for="apellidos">Apellidos:</label>
+                            <input type="text" name="apellidos" id="apellidos">
+                        </td>
+                        <td>
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" name="nombre" id="nombre">
+                        </td>
+                        <td>
+                            <label for="dni">Número de identificación:</label>
+                            <input type="text" name="dni" id="dni"  maxlength="10">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="nacido">Nacido en:</label>
+                            <input type="text" name="nacido" id="nacido">
+                        </td>
+                       
+                        <td>
+                            <label for="nacimiento">Fecha de nacimiento (dd/mm/aaaa):</label>
+                            <input type="text" name="nacimiento" id="nacimiento"  maxlength="10">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <label for="domicilio">Domicilio:</label>
+                            <select id="domicilio" name="domicilio">
+                            <option value="avenida">Avenida</option>
+                            <option value="calle">Calle</option>
+                            <option value="camino">Camino</option>
+                            <option value="plaza">Plaza</option>
+                            </select>
+
+
+                            <input type="text" name="domicilio1" id="domicilio1">
+                        </td>
+
+                        <td>
+                            <label for="cp">Codigo Postal:</label>
+                            <input type="text" name="cp" id="cp"  maxlength="5">
+                        </td>
+
+                    </tr>
+
+                    <tr>
+                        
+                        <td>
+                            <label for="localidad">Municipio:</label>
+                            <input type="text" name="localidad" id="localidad">
+                        </td>
+                        
+                        <td>
+                            <label for="telf">Teléfono:</label>
+                            <input type="text" name="telf" id="telf"  maxlength="13">
+                        </td>
+                    </tr>
+                    
+                </form>
+            </table>
+        </div>
+        
+		<div><h3>ng-if</h3>   </div>
+        <div>Uso de condicionales
+            <br>
+            <span ng-if="x==5">x==5</span>
+            
+        </div>
+        
+        
+        <div><h3>ng-click</h3>   </div>
+        <div>Aplicaciòn de acciones a un boton o elemento
+            <br>
+            <input type="button" value="Aumentar" ng-click="x=x+1"/>
+            {{x + "," + y}}
+            
+            <br>
+            <input type="button" value="Disminuir" ng-click="x=x-1"/>
+            {{x + "," + y}}
+            
+        </div>
+        
+        <div><h3>ng-mouseOver</h3>   </div>
+        <div>Aplicaciòn de acciones cuando el puntero esta aplicado sobre un elemento
+            <br>
+            <input type="button" value="Aumentar" ng-mouseOver="y=y+5"/>
+            {{x + "," + y}}
+        </div>
+        
+         <div><h3>ng-dblclick</h3>   </div>
+        <div>Aplicaciòn de acciones cuando el puntero esta aplicado sobre un elemento           
+            <br>
+            <input type="button" value="Disminuir" ng-dblclick="x=x-1"/>
+            {{x + "," + y}}
+            
+        </div>
+        
+        
+        <div><h3>ng-keypress</h3>   </div>
+        <div>Aplicaciòn de acciones cuando presionamos teclas de numeros, letras, caracteres           
+            <br>
+            <h5>Z= {{z}}</h5>
+            <input type="text" value="Multiplicar Z" ng-keypress="z=z*5"/>
+            
+        </div>
+        
+        <div><h3>ng-show  & ng-hide</h3>   </div>
+        <div>Directivas bastante utilizadas para ocultar o mostrar elementos, ¿Cual es la diferencia con ng-if?          
+            <br>            
+            <input type="checkbox" ng-model="myFlag"/>
+            <br>            
+            <span ng-show="myFlag"> La bandera esta activa</span>            
+            <span ng-hide="myFlag"> La bandera no esta activa</span>
+            
+        </div>
+        
+        <div><h3>ng-repeat</h3>   </div>
+        <div>Realiza iteraciones sobre elementos         
+            <br>            
+            <span ng-repeat="persona in personas">
+                {{persona.nombre + " es de " + persona.pais}}                
+            </span>
+            
+            <br>
+            <label for="repeatSelect"> Elementos: </label>
+            <select name="repeatSelect" id="repeatSelect" ng-model="personaSeleccionada" >
+              <option ng-repeat="option in personas" value="{{option.nombre}}">{{option.nombre}} - {{option.pais}}</option>
+            </select>               
+            <label> Seleccionaste a: {{personaSeleccionada}}</label>
+            
+        </div>
+        
+       <div><h3>ng-class</h3>   </div>
+        <div>Realiza cargas dinamicas de clase en elementos que contengan la directiva        
+            <br>            
+            <input type="text" ng-model="estilo1"/>
+            <p ng-class="estilo1"> Prueba 1 de ng-class </p>
+            
+            <br>
+            <input type="text" ng-model="estilo2"/>
+            <input type="text" ng-model="estilo3"/>
+            <p ng-class="[estilo2, estilo3]"> Prueba 2 de ng-class </p>
+            
+            <br>
+            <input type="checkbox" ng-model="usarError"/> error
+            <input type="checkbox" ng-model="usarBold"/> bold
+            <p ng-class="{'error' : usarError , 'bold': usarBold}"> Prueba 3 de ng-class </p>
+            
+            
+            
+        </div>
+        
+	</body>
+
+
+
+
+</html>

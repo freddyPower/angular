@@ -1,0 +1,27 @@
+@charset "utf-8";
+/* CSS Document */
+label { display: block;}
+table { background-color: #E7E7E7;
+  border: 1px solid #92938D;
+  width: 700px;}
+input { border: 2px solid #8CA8C0;}
+select { border: 2px solid #8CA8C0;}
+
+div { margin:auto;
+ width: 710px;
+ padding-left: 10px;
+ padding-bottom: 10px;
+ background-color: #F6F6F6;}
+input[name="apellidos"] { width: 300px;}
+input[name="dni"] { width: 90px;}
+input[name="nombre"] { width: 110px;}
+input[name="nacimiento"] { width: 90px;}
+input[name="domicilio1"] { width: 365px;}
+input[name="cp"] { width: 55px;}
+input[name="telf"] { width: 95px;}
+input[name="enviar"] { float:right;}
+input[name="borrar"] { float:right;
+      margin-right: 5px;}
+h1 { background-color: #E2E2E4;
+   margin-left: -10px;
+     padding-left: 10px;}
