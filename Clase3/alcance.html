@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+    
+    <head>
+        <title>AngularJs Alcance Modulos y Controladores</title>
+        <meta charset="utf-8">       
+        <link rel="stylesheet" type="text/css" href="style.css" media="screen" />        
+         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>         
+         <script src="js/alcance.js"></script>
+    </head>
+    
+    <body ng-app="modAlcance">
+            
+        <div><h3>Ejercicio 1 Algoritmos: Adivina el número</h3>   </div>
+        
+            Definición del alcance del scope y rootScope
+            
+            <p><strong>Podemos ver:   </strong> {{propiedadRaiz}} </p>
+
+            <div id="controladorExterno" ng-controller="controladorExterno">
+                    <p><strong>Podemos ver:   </strong> {{propiedadRaiz}}  y
+                    {{propiedadExterna}}</p>
+
+
+                     <div id="controladorInterno" ng-controller="controladorInterno">
+                            <p><strong>Podemos ver:   </strong> {{propiedadRaiz}} ,
+                            {{propiedadInterna}} y {{propiedadInterna}}
+
+                            </p> 
+                            {{mensaje}}
+                    </div>
+
+            </div>
+
+        
+        
+    </body>
+</html>

@@ -1,0 +1,51 @@
+Controladores y modulos
+
+Los controladores son funciones que le dan mas funcionalidad al scope y con las que se inicializa el mismO.
+Permiten añadir funcionalidad al scope con ciertos atributos.
+
+En el còdigo HTML se utilizarà la directiva ng-controller.
+La nomenclatura para llamarlo es por medio de: NombreController
+
+
+Como regla, debemos construir un controlller por vista.
+Tener controladores pequeños, bien definidos y siempre para una sola vista.
+
+
+Los metodos y propiedades  del controlador (scope) se pueden usar en la vista
+El controller se debe incrustar en un elemento, por ejemplo:
+
+<div ng-controller="MainController" > </div>
+
+Para realizarlos
+
+controller('MainController' , function($scope){
+	
+	...
+
+});
+
+Este es el concepto de inyecciòn de dependencias.
+
+
+
+Modulos
+
+Son unidades o bloques de còdigo que permiten el encapsulamiento para preveneir colisiones en el espacio global
+La idea es reutilizar còdigo dentro de nuestra aplicaciòn.
+
+Aquì se escribe el còdigo de la aplicaciòn.
+
+Una aplicaciòn puede tener varios moduos. Cada uno con còdigo relacionado con diferentes partes de la aplicaciòn 
+
+
+Para definir un modulo...
+
+angular.module('miModulo' , [ ... Aquì se puede realizar una inyeccion de dependencias si es que existe, de lo contrario vacio ]);
+
+Para implementar un modulo
+angular.module('miModulo');
+
+se utiliza la misma estructura pero sin el segundo parametro, la inyecciòn de dependencias.
+
+
+

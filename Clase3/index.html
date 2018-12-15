@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html>
+	
+	<head>
+		<title>AngularJs Modulos y Controladores</title>
+        <meta charset="utf-8">       
+        <link rel="stylesheet" type="text/css" href="style.css" media="screen" />        
+         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>         
+         <script src="js/modulo.js"></script>
+	</head>
+	
+	<body ng-app="counter">
+			
+        <div><h3>Modulos y Controladores</h3>   </div>
+        <div ng-controller="MainController">Definición e implementacion de un modulo
+            
+            <br>
+            <button ng-click="sumarUno()">Sumar</button>
+            <button ng-click="restarUno()">Restar</button>
+
+            <h5>Valor del contador: {{contador}}</h5>
+           
+        </div>   
+        
+	</body>
+</html>

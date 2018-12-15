@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+    
+    <head>
+        <title>AngularJs Modulos y Controladores</title>
+        <meta charset="utf-8">       
+        <link rel="stylesheet" type="text/css" href="style.css" media="screen" />        
+         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>         
+         <script src="js/mod_algoritmo.js"></script>
+    </head>
+    
+    <body ng-app="modAlgoritmo">
+            
+        <div><h3>Ejercicio 1 Algoritmos: Adivina el número</h3>   </div>
+        <div ng-controller="MainController">
+            Definición e implementacion de algoritmos en modulos y controladores
+            <br><h5>Adivina un número entre 1 y 100</h5><br>
+            
+            <h5>Número de intentos: </h5><br>
+            <input type="number" ng-model="numeroUsuario"/>
+            <button ng-click="verificar()"> Verificar </button>
+            <button ng-click="inicializar()"> Reiniciar </button>
+
+            <br>
+            <p>
+                <p ng-show="diferencia < 0">Muy alto</p>
+                <p ng-show="diferencia > 0">Muy bajo</p>
+                <p ng-show="diferencia == 0">¡Exacto!</p>
+            </p>
+           
+            <p>
+                <p>Intentos: {{intentos}}</p>
+                <p>Número secreto: {{numeroSecreto}}</p>
+                <p>Número usuario: {{numeroUsuario}}</p>
+                <p>Diferencia: {{diferencia}}</p>
+            </p>
+
+        </div>   
+        
+    </body>
+</html>
