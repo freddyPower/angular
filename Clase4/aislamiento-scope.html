@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+    
+    <head>
+        <title>AngularJs Modulos y Controladores</title>
+        <meta charset="utf-8">       
+        <link rel="stylesheet" type="text/css" href="style.css" media="screen" />        
+         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>         
+         <script src="js/app.js"></script>
+    </head> 
+    
+    <body ng-app="mainModule">
+            
+        <div><h3>Directivas personalizadas - Aislamiento del Scope</h3>   </div>
+        <div ng-controller="MainController">Definición e implementacion de una directiva personalizada
+            
+            <br><br>
+            Directiva como elemento
+            <!--<mi-directiva> </mi-directiva>-->
+            <mi-directiva libro-autor="{{libro.autor}}" libro-titulo="{{libro.titulo}}"  libro-objeto ="libro" 
+                en-mayusculas="enMayusculas(libro)"> </mi-directiva>
+
+            <br>
+            Para mas informacion: https://docs.angularjs.org/guide/directive
+
+            <br>
+
+           
+        </div>   
+        
+    </body>
+</html>

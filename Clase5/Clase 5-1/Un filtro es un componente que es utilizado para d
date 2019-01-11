@@ -1,0 +1,40 @@
+Un filtro es un componente que es utilizado para darle un formato espeficio a informaciòn que un usuario solicita
+de una manera facil de comprender para el mismo.
+
+Existen filtros de formato de texto
+monedas
+precios
+fechas
+mayusculas
+minusculas
+Limites de caracteres 
+
+Angular implementa algunos filtros pero tambien los podemos crear nosotros
+
+
+DECLARACION DE FILTROS
+
+{{expression | filtro}}
+
+{{'Hola mundo' | upercase}}
+
+	
+angular mostraria lo siguiente: HOLA MUNDO
+
+Ejemplo de paso de argumentos
+{{hoy | date:'shortDate'}}
+
+Angular mostraría
+04/01/2019
+
+
+VALIDACION DE FORMULARIOS
+
+Directivas de validacion
+directivas por ngmessages
+Reusar mensajes
+Validacion de telefonos y correo electronico
+
+
+Enrutamiento
+

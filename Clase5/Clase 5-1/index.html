@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+    
+    <head>
+        <title>AngularJs Modulos y Controladores</title>
+        <meta charset="utf-8">       
+        <link rel="stylesheet" type="text/css" href="style.css" media="screen" />        
+         <script src="js/angular.min.js"> </script>  
+
+         <script src="js/app.js"> </script>          
+    </head> 
+    
+    <body ng-app="mainModule">
+            
+        <div><h3>Filtros</h3>   </div>
+        
+        <div ng-controller="MainController">
+
+            Definición e implementacion de filtros en angular js
+            <br>
+            {{libros | filter:{ 'publicado' : '1967' } }}
+            <br>
+            {{"hola mundo" | uppercase}}
+            <br>
+            {{"hola mundo" | limitTo:6}}
+            <br>
+            {{"hola mundo" | uppercase | limitTo:5}}
+
+            <br>
+            {{ 222 | currency }}
+            
+          
+            
+        </div>   
+        
+    </body>
+</html>
